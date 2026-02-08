@@ -30,4 +30,5 @@ def distribute_text(message)
     if msg_counter = 6
         msg_counter = 0
 
+
 bot.infinity_polling()
