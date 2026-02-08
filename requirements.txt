@@ -26,4 +26,3 @@ def distribute(message):
         pass
 
 bot.infinity_polling()
-
