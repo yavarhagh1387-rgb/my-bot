@@ -11,25 +11,23 @@ INTERFACE_2 = 6936902567
 msg_counter = 0
 
 @bot.message_handler(func=lambda message: True)
-def distribute_text(message)
+def distribute_text(message):
     global msg_counter
     
     # فقط متن را بدون هیچ تغییر یا واترمارکی ارسال می‌کند
     text_to_send = message.text 
     
-    if msg_counter  4
+    if msg_counter < 4:
         # ارسال به رابط 1
         bot.send_message(INTERFACE_1, text_to_send)
-    else
+    else:
         # ارسال به رابط 2
         bot.send_message(INTERFACE_2, text_to_send)
     
     msg_counter += 1
     
     # بعد از 6 پیام (4+2)، شمارنده صفر می‌شود
-    if msg_counter = 6
+    if msg_counter == 6:
         msg_counter = 0
 
-
 bot.infinity_polling()
-
