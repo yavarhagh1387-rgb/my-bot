@@ -10,7 +10,7 @@ INTERFACE_2 = 6936902567
 # شمارنده برای مدیریت توزیع 4 به 2
 msg_counter = 0
 
-@bot.message_handler(func=lambda message True)
+@bot.message_handler(func=lambda message: True)
 def distribute_text(message)
     global msg_counter
     
@@ -32,3 +32,4 @@ def distribute_text(message)
 
 
 bot.infinity_polling()
+
